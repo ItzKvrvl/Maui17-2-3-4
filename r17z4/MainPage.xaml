@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="r17z4.MainPage">
+
+    <Grid
+        HorizontalOptions="Center"
+        ColumnSpacing="25">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+
+        <!--header-->
+        <HorizontalStackLayout 
+            Grid.Row="0" Grid.Column="0"
+            Spacing="20"
+            Padding="25">
+
+            <Label Text="Moja Galeria" SemanticProperties.HeadingLevel="Level1"/>
+            <Button Text="Dodaj zdjecie"/>
+        </HorizontalStackLayout>
+
+        <!--main-->
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <FlexLayout 
+                x:Name="ImagesGallery"
+                Direction="Column"
+                Wrap="Wrap"
+                HorizontalOptions="Center">
+
+
+                <Grid HeightRequest="100" WidthRequest="100">
+                    <BoxView BackgroundColor="Yellow" HeightRequest="100" WidthRequest="100"></BoxView>
+                    <ImageButton
+                            x:Name="yellow"
+                            Source="labubu.png"
+                            Clicked="clyellow"
+                            HeightRequest="100"/>
+                </Grid>
+                <Grid HeightRequest="100" WidthRequest="100">
+                    <BoxView BackgroundColor="red" HeightRequest="100" WidthRequest="100"></BoxView>
+                        <ImageButton
+                            x:Name="red"
+                            Source="labubu.png"
+                            Clicked="clred"
+                            HeightRequest="100"/>
+                </Grid>
+                <Grid HeightRequest="100" WidthRequest="100">
+                    <BoxView BackgroundColor="blue" HeightRequest="100" WidthRequest="100"></BoxView>
+                        <ImageButton
+                            x:Name="blue"
+                            Source="labubu.png"
+                            Clicked="clblue"
+                            HeightRequest="100"/>
+                </Grid>
+                <Grid HeightRequest="100" WidthRequest="100">
+                    <BoxView BackgroundColor="green" HeightRequest="100" WidthRequest="100"></BoxView>
+                        <ImageButton
+                            x:Name="green"
+                            Source="labubu.png"
+                            Clicked="clgreen"
+                            HeightRequest="100"/>
+                </Grid>
+                <Grid HeightRequest="100" WidthRequest="100">
+                    <BoxView BackgroundColor="pink" HeightRequest="100" WidthRequest="100"></BoxView>
+                        <ImageButton
+                            x:Name="pink"
+                            Source="labubu.png"
+                            Clicked="clpink"
+                            HeightRequest="100"/>
+                </Grid>
+                <Grid HeightRequest="100" WidthRequest="100">
+                    <BoxView BackgroundColor="orange" HeightRequest="100" WidthRequest="100"></BoxView>
+                        <ImageButton
+                            x:Name="orange"
+                            Source="labubu.png"
+                            Clicked="clorange"
+                            HeightRequest="100"/>
+                </Grid>
+            </FlexLayout>
+        </ScrollView>
+
+        <!--footer-->
+        <HorizontalStackLayout
+            Grid.Row="2" Grid.Column="0"
+            Spacing="20"
+            Padding="25">
+
+            <Label x:Name="ilosc" Text="aktualna liczba zdjec"/>
+            <Button Text="poprzednia"/>
+            <Button Text="nastepna strona"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
