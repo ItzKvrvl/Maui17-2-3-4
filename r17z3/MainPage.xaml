@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="r17z3.MainPage">
+
+    <Frame
+        BorderColor="#6495ED"
+        CornerRadius="5"
+        Padding="12"
+        HorizontalOptions="Center"
+        VerticalOptions="Start">
+        
+        <Grid
+            HorizontalOptions="Center"
+            ColumnSpacing="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Source="kask.png"
+                HeightRequest="200"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                Grid.Row="0" Grid.Column="1"
+                Margin="50"/>
+            <Label 
+                Text="Off-Road Enduro Cross Quad Atv + Gogle" 
+                Grid.Row="0" Grid.Column="0"
+                FontAttributes="Bold"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                HeightRequest="50"
+                VerticalTextAlignment="Center"
+                BackgroundColor="#6495ED"/>
+            <Label 
+               Text="Szukasz jakościowego i eleganckiego kasku w teren? Mamy coś dla ciebie!" 
+               Grid.Row="1" Grid.Column="0"
+               TextColor="#333333"
+               WidthRequest="350"
+                HorizontalTextAlignment="Center"/>
+            <Label
+               Text="Juz od 599.99zł" 
+               Grid.Row="0" Grid.Column="2"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               HeightRequest="40"
+               FontSize="20"
+               TextColor="Green"
+               VerticalTextAlignment="Center"
+               BackgroundColor="#eeeeee"/>
+            <HorizontalStackLayout
+               Grid.Row="2" Grid.Column="0"
+               BackgroundColor="#eeeeee"
+               HorizontalOptions="Center"
+               WidthRequest="400"
+               Padding="10">
+             
+                <Label Text="Średnia ocena ostatnich 100 kupujących: 5.0"/>
+                <Label Text="★"/>
+                <Label Text="★"/>
+                <Label Text="★"/>
+                <Label Text="★"/>
+                <Label Text="★"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="10"
+                Grid.Row="2" Grid.Column="2">
+
+                <Button 
+                    Text="Dodaj do koszyka"
+                    WidthRequest="150"
+                    BackgroundColor="#6495ED"/>
+                <Button 
+                    Text="Kup teraz"
+                    WidthRequest="150"
+                    BackgroundColor="#6495ED"/>
+            </HorizontalStackLayout>
+        </Grid>
+    </Frame>
+</ContentPage>
